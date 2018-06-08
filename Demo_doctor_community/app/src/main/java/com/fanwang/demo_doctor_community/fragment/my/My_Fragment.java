@@ -10,11 +10,14 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import com.fanwang.demo_doctor_community.R;
 import com.fanwang.demo_doctor_community.activity.My_Order;
 import com.fanwang.demo_doctor_community.activity.My_serve_bao;
+import com.fanwang.demo_doctor_community.activity.Touxiang;
 import com.fanwang.demo_doctor_community.commonality.Popuplace_Fragment;
+import com.fanwang.demo_doctor_community.custom.XCRoundImageView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -44,6 +47,18 @@ public class My_Fragment extends Popuplace_Fragment {
     LinearLayout myComplaint;
     @BindView(R.id.my_problem)
     LinearLayout myProblem;
+    @BindView(R.id.xcr_touxiang)
+    XCRoundImageView xcrTouxiang;
+    @BindView(R.id.my_indent_rl)
+    RelativeLayout myIndentRl;
+    @BindView(R.id.my_serve_bao)
+    RelativeLayout myServeBao;
+    @BindView(R.id.my_eat_medicine)
+    RelativeLayout myEatMedicine;
+    @BindView(R.id.my_complaint_rl)
+    RelativeLayout myComplaintRl;
+    @BindView(R.id.my_problem_rl)
+    RelativeLayout myProblemRl;
     private Intent intent;
 
     @Nullable
@@ -59,7 +74,7 @@ public class My_Fragment extends Popuplace_Fragment {
 
     }
 
-    @OnClick({R.id.my_indent_rl, R.id.my_serve_bao})
+    @OnClick({R.id.my_indent_rl, R.id.my_serve_bao,R.id.xcr_touxiang})
     public void OnItemsOnclick(View view) {
         switch (view.getId()) {
             case R.id.my_indent_rl:
@@ -68,6 +83,11 @@ public class My_Fragment extends Popuplace_Fragment {
                 break;
             case R.id.my_serve_bao:
                 intent = new Intent(getContext(), My_serve_bao.class);
+                startActivity(intent);
+                break;
+
+            case R.id.xcr_touxiang:
+                intent = new Intent(getContext(), Touxiang.class);
                 startActivity(intent);
                 break;
         }

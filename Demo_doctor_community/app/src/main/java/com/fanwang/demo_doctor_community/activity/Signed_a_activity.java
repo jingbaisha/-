@@ -28,8 +28,7 @@ public class Signed_a_activity extends Populace_Activity {
 
     @BindView(R.id.title_fragment_content)
     LinearLayout titleFragmentContent;
-    @BindView(R.id.star_doctor)
-    StarBar starDoctor;
+
     @BindView(R.id.stl_tab_signed)
     SlidingTabLayout stlTabSigned;
     @BindView(R.id.stl_tab_vp)

@@ -11,6 +11,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <LinearLayout
             android:id="@id/title_fragment_content"
             android:layout_width="match_parent"
@@ -63,15 +64,6 @@
                         android:layout_height="wrap_content"
                         android:gravity="center">
 
-                        <com.fanwang.demo_doctor_community.custom.StarBar
-                            android:id="@+id/star_doctor"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/y10"
-                            ratingbar:starDistance="5dp"
-                            ratingbar:starEmpty="@drawable/aa_109"
-                            ratingbar:starFill="@drawable/aa_110"
-                            ratingbar:starSize="12dp" />
 
                     </LinearLayout>
 

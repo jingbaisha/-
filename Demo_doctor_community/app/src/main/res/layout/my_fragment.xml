@@ -54,6 +54,7 @@
             android:orientation="horizontal">
 
             <com.fanwang.demo_doctor_community.custom.XCRoundImageView
+                android:id="@+id/xcr_touxiang"
                 android:layout_width="@dimen/y140"
                 android:layout_height="@dimen/y140"
                 android:src="@drawable/aa" />
