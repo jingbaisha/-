@@ -36,7 +36,7 @@ public class Serve_Fragment extends Fragment {
     @BindView(R.id.rl_top)
     RelativeLayout rlTop;
     @BindView(R.id.lin_lay_search)
-    LinearLayout linLaySearch;
+    RelativeLayout linLaySearch;
     @BindView(R.id.rb_one)
     RadioButton rbOne;
     @BindView(R.id.rb_two)
@@ -71,20 +71,13 @@ public class Serve_Fragment extends Fragment {
     public void OnItemsOnclick(View view){
         switch (view.getId()){
             case R.id.rb_one:
-                fragmentTransaction = getFragmentManager().beginTransaction();
-                fragmentTransaction1 = this.fragmentTransaction.replace(R.id.fl_right, new Serve_right_items());
-                fragmentTransaction.commit();
-                break;
             case R.id.rb_two:
-                fragmentTransaction = getFragmentManager().beginTransaction();
-                fragmentTransaction1 = this.fragmentTransaction.replace(R.id.fl_right, new Serve_right_items());
-                fragmentTransaction.commit();
-                break;
             case R.id.rb_three:
                 fragmentTransaction = getFragmentManager().beginTransaction();
                 fragmentTransaction1 = this.fragmentTransaction.replace(R.id.fl_right, new Serve_right_items());
                 fragmentTransaction.commit();
                 break;
+
             case R.id.login_btn:
                 MaterialDialog dialog = new MaterialDialog.Builder(getContext())
                         .customView(R.layout.dialog_a, false)

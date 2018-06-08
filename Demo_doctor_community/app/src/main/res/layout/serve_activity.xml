@@ -12,9 +12,51 @@
         android:orientation="vertical" />
 
     <RelativeLayout
+        android:id="@+id/lin_lay_search"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/fw_13">
+        android:layout_height="@dimen/y220"
+        android:layout_below="@+id/rl_top"
+        android:background="@drawable/fw_13"
+        android:orientation="horizontal">
+
+        <com.fanwang.demo_doctor_community.custom.SearchView
+            android:id="@+id/searchview"
+            android:layout_width="@dimen/x470"
+            android:layout_height="@dimen/y95"
+            android:layout_centerVertical="true" />
+
+        <RelativeLayout
+            android:layout_width="@dimen/x154"
+            android:layout_height="@dimen/y105"
+            android:layout_alignBottom="@+id/searchview"
+            android:layout_toEndOf="@+id/searchview"
+            android:layout_toRightOf="@+id/searchview"
+            android:background="@drawable/aa_18">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toLeftOf="@+id/lin_xiala"
+                android:text="医生"
+                android:textSize="10.5sp" />
+
+            <LinearLayout
+                android:id="@+id/lin_xiala"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/aa_17"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/triangle" />
+            </LinearLayout>
+
+        </RelativeLayout>
 
     </RelativeLayout>
 
